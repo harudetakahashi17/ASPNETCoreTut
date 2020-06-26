@@ -1,0 +1,75 @@
+﻿@page
+@model ASPNETCoreTut.Pages.AdminLogin.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Create</h1>
+
+<h4>VotingItems</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="VotingItems.Name" class="control-label"></label>
+                <input asp-for="VotingItems.Name" class="form-control" />
+                <span asp-validation-for="VotingItems.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VotingItems.Description" class="control-label"></label>
+                <input asp-for="VotingItems.Description" class="form-control" />
+                <span asp-validation-for="VotingItems.Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VotingItems.CreatedDate" class="control-label"></label>
+                <input asp-for="VotingItems.CreatedDate" class="form-control" />
+                <span asp-validation-for="VotingItems.CreatedDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VotingItems.SupportCount" class="control-label"></label>
+                <input asp-for="VotingItems.SupportCount" class="form-control" />
+                <span asp-validation-for="VotingItems.SupportCount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VotingItems.DueDate" class="control-label"></label>
+                <input asp-for="VotingItems.DueDate" class="form-control" />
+                <span asp-validation-for="VotingItems.DueDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VotingItems.Category" class="control-label"></label>
+                <input asp-for="VotingItems.Category" class="form-control" />
+                <span asp-validation-for="VotingItems.Category" class="text-danger"></span>
+            </div>
+            @*<div class="form-group">
+                <label asp-for="VotingItems.CreatedBy" class="control-label"></label>
+                <input asp-for="VotingItems.CreatedBy" class="form-control" />
+                <span asp-validation-for="VotingItems.CreatedBy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VotingItems.ModifiedOn" class="control-label"></label>
+                <input asp-for="VotingItems.ModifiedOn" class="form-control" />
+                <span asp-validation-for="VotingItems.ModifiedOn" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VotingItems.ModifiedBy" class="control-label"></label>
+                <input asp-for="VotingItems.ModifiedBy" class="form-control" />
+                <span asp-validation-for="VotingItems.ModifiedBy" class="text-danger"></span>
+            </div>*@
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
